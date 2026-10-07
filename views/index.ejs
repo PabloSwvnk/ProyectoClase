@@ -6,22 +6,176 @@
   </head>
 
   <body>
-    <nav style="width: 100%; background: #003366; display: flex; justify-content: center; align-items: center; padding: 0.5rem 0; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
-      <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem;">
-        <li><a href="#about" style="color: #fff; text-decoration: none; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;">About Us</a></li>
-        <li><a href="#programs" style="color: #fff; text-decoration: none; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;">Programs</a></li>
-        <li><a href="#faculty" style="color: #fff; text-decoration: none; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;">Faculty</a></li>
-        <li><a href="#admissions" style="color: #fff; text-decoration: none; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;">Admissions</a></li>
-        <li><a href="#contact" style="color: #fff; text-decoration: none; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;">Contact</a></li>
-      </ul>
-    </nav>
-
-    <header style="width: 100%; height: 250px; background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-      <h2 style="color: white; background: rgba(0,0,0,0.60); padding: 1rem 2.5rem; border-radius: 10px; font-size: 2.2rem; letter-spacing: 2px;">
-        California Vocational Training Institute
-      </h2>
-    </header>
     
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+      /* Frutiger Aero inspired Aero, futuristic, rounded font approximation using Montserrat */
+      body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: linear-gradient(135deg, #bfe8ff 0%, #70cfef 100%);
+        color: #24475b;
+        margin: 0;
+        min-height: 100vh;
+      }
+      nav {
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: rgba(0, 73, 142, 0.9);
+        box-shadow: 0 4px 16px rgba(0, 40, 83, 0.14);
+      }
+      nav ul li a:hover {
+        color: #30d5c8;
+        text-shadow: 0 1px 7px #fffdda50;
+      }
+      header {
+        background: linear-gradient(90deg, rgba(48,213,200,0.40) 0%, rgba(112,207,239,0.30) 50%, rgba(191,232,255,0.40) 100%), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80');
+        background-size: cover;
+        background-position: center;
+        border-bottom-left-radius: 26px;
+        border-bottom-right-radius: 26px;
+        box-shadow: 0 6px 16px rgba(39, 116, 155, 0.16);
+      }
+      .section {
+        background: rgba(255,255,255,0.8);
+        margin: 2rem auto;
+        padding: 2.5rem 2rem;
+        max-width: 920px;
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(34, 71, 91, 0.07);
+        backdrop-filter: blur(1.5px);
+      }
+      .section h3 {
+        font-size: 1.6rem;
+        color: #198fb7;
+        margin-bottom: 1rem;
+        letter-spacing: 1.2px;
+      }
+      .info-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+      .info-card {
+        background: linear-gradient(120deg, #c1e8fa 40%, #62e0e0 110%);
+        border-radius: 16px;
+        box-shadow: 0 1px 10px rgba(112,207,239,0.16);
+        padding: 1.5rem;
+        min-width: 220px;
+        max-width: 290px;
+        flex: 1 1 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .info-card img {
+        border-radius: 12px;
+        margin-bottom: 1rem;
+      }
+      .info-card h4 {
+        margin-top: 0;
+        color: #009ddc;
+        font-weight: 700;
+      }
+      .faculty-list, .program-list {
+        margin-left: 1.1rem;
+        font-size: 1.06rem;
+      }
+      .cta {
+        background: linear-gradient(90deg, #009ddc 0%, #30d5c8 100%);
+        color: #fff;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 2rem;
+        letter-spacing: 1.2px;
+        box-shadow: 0 2px 16px #30d5c855;
+      }
+      @media (max-width: 799px) {
+        .info-cards { flex-direction: column; align-items: center; }
+      }
+    </style>
+    
+    <main>
+      <!-- About Us Section -->
+      <section id="about" class="section">
+        <h3>About Us</h3>
+        <div class="info-cards">
+          <div class="info-card">
+            <img src="https://picsum.photos/seed/training/160/110" width="160" height="110" alt="Students">
+            <h4>Empowering Your Future</h4>
+            <p>
+              At California Vocational Training Institute, we provide high-quality, hands-on vocational education to prepare students for their professional careers. Our mission is to empower students with the technical, practical, and soft skills demanded by the modern workforce.
+            </p>
+          </div>
+          <div class="info-card">
+            <img src="https://picsum.photos/seed/campus/160/110" width="160" height="110" alt="Campus">
+            <h4>State-of-the-Art Facilities</h4>
+            <p>
+              Learn in modern classrooms and workshops equipped with the latest technology to simulate real-world environments.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Programs Section -->
+      <section id="programs" class="section">
+        <h3>Our Programs</h3>
+        <ul class="program-list">
+          <li>Web Development & Programming</li>
+          <li>Network Administration</li>
+          <li>Graphic Design & Multimedia</li>
+          <li>Healthcare Assistant</li>
+          <li>Automotive Technology</li>
+          <li>Business Administration</li>
+          <li>Electrical Installations</li>
+        </ul>
+      </section>
+
+      <!-- Faculty Section -->
+      <section id="faculty" class="section">
+        <h3>Meet Our Faculty</h3>
+        <ul class="faculty-list">
+          <li>Jane Evans – Senior Web Development Instructor</li>
+          <li>Mark Lee – Network & IT Specialist</li>
+          <li>Lucia Rojas – Graphic Design Mentor</li>
+          <li>Simon Grant – Automotive Lead Instructor</li>
+          <li>Emily Huang – Vocational Skills Coach</li>
+        </ul>
+      </section>
+
+      <!-- Admissions Section -->
+      <section id="admissions" class="section">
+        <h3>Admissions</h3>
+        <div class="cta">
+          <p>Enroll now for the Fall 2024 intake!</p>
+          <p><strong>Application Deadline:</strong> July 15th, 2024</p>
+          <a href="#contact" style="color:#fff; text-decoration:underline;">Contact admissions today &rarr;</a>
+        </div>
+        <ul>
+          <li>Online application process</li>
+          <li>Personal interview with our Admissions team</li>
+          <li>Flexible payment plans available</li>
+        </ul>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <h3>Contact Us</h3>
+        <p>
+          <strong>Email:</strong> info@cvti.edu<br>
+          <strong>Phone:</strong> +1 (555) 123-4567<br>
+          <strong>Address:</strong> 1234 Mission Ave, San Diego, CA
+        </p>
+        <form style="max-width:500px; margin-top:1.5rem;">
+          <input type="text" name="name" placeholder="Your Name" required style="width: 100%; margin-bottom: 0.9rem; padding: 0.8rem 1rem; font-family: inherit; border-radius: 22px; border: 1px solid #30d5c8;">
+          <input type="email" name="email" placeholder="Your Email" required style="width: 100%; margin-bottom: 0.9rem; padding: 0.8rem 1rem; font-family: inherit; border-radius: 22px; border: 1px solid #30d5c8;">
+          <textarea name="message" rows="4" placeholder="Your Message" required style="width:100%; margin-bottom: 0.9rem; padding: 0.8rem 1rem; font-family: inherit; border-radius: 18px; border: 1px solid #70cfef;"></textarea>
+          <button type="submit" style="background: linear-gradient(90deg, #009ddc 0%, #30d5c8 100%); color:#fff; padding: 0.9rem 2.2rem; border:none; border-radius: 17px; font-size:1rem; font-family:inherit; box-shadow:0 2px 10px #30d5c825; font-weight:600; cursor:pointer; transition: background 0.18s;">Send Message</button>
+        </form>
+      </section>
+    </main>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <footer>
